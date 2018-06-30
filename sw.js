@@ -5,7 +5,7 @@ self.addEventListener('install', function(event) {
     caches.open(currencyCache).then(function(cache) {
       return cache.addAll([
         '/index.html',
-        './dist/main.js',
+        '/dist/main.js',
         '/img/app-bg.png',
         'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css'
       ]);
