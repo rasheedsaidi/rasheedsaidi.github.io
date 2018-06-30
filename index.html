@@ -27,6 +27,10 @@
 
                     <form>
                         <div class="form-group">
+                            <label for="from_currency">Amount to Convert</label>
+                            <input type="number" class="form-control" value="1" id="amount_from_currency" name="amount_from_currency">
+                        </div>
+                        <div class="form-group">
                             <label for="from_currency">Convert From</label>
                             <select class="form-control currency_list" id="from_currency" name="from_currency">
                             <option>Select Currency</option>
@@ -42,6 +46,10 @@
                             <button type="button" class="btn btn-primary" id="convert">Convert</button>
                         </div>
                     </form>
+
+                    <div class="section">
+                        <h1 id="conversion_result" class="text-center text-white"></h1>
+                    </div>
               </div>
           </div>
             
