@@ -40,7 +40,7 @@ document.getElementById('convert').addEventListener("click", convertCurrency);
 let sWorker;
 
 if ( navigator.serviceWorker ) {
-    navigator.serviceWorker.register('/sw.js').then( registered => {
+    navigator.serviceWorker.register('./sw.js').then( registered => {
         sWorker = registered;
     }).catch( e => {
         console.error(e);
