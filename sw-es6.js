@@ -9,6 +9,7 @@ self.addEventListener('install', function(event) {
       return cache.addAll([
         'index.html',
         'dist/main.js',
+        'sw.js',
         'img/app-bg.png',
         'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css',
         'https://code.jquery.com/jquery-3.3.1.slim.min.js',
