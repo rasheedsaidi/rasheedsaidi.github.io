@@ -41,12 +41,9 @@ self.addEventListener('activate', function(event) {
 
 self.addEventListener('fetch', function(event) {
   var requestUrl = new URL(event.request.url);
-  console.log(requestUrl.origin, location.origin, requestUrl.pathname);
   if (requestUrl.origin === location.origin) {
-    if (requestUrl.pathname === '/') {
       event.respondWith(caches.match('/index.html'));
       return;
-    }
   }
 
   if(requestUrl.pathname.endsWith('currencies')) {
