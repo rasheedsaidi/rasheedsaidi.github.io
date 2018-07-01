@@ -23,10 +23,10 @@ module.exports = [{
   }
 }, {
   mode: 'development',
-  entry: './sw.js',
+  entry: './sw-es6.js',
   output: {
     filename: 'sw.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, './')
   },
   module: {
     rules: [

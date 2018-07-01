@@ -1,7 +1,7 @@
 import getAPI from './utilities/getAPI';
 
 let countries = {};
-getAPI("https://free.currencyconverterapi.com/api/v5/currencies").then( c => {
+getAPI("https://free.currencyconverterapi.com/api/v5/currencies").then( c => { console.log(c);
     const results = c.results;
     let options_usd = '<option value="">Select Currency</option>';
     let options_ngn = '<option value="">Select Currency</option>';
@@ -26,6 +26,8 @@ getAPI("https://free.currencyconverterapi.com/api/v5/currencies").then( c => {
     };
 
     //$('.currency_list').html(options);
+}).catch( e => {
+    console.log(e);
 });
 
 document.getElementById('convert').addEventListener("click", convertCurrency);
@@ -33,7 +35,7 @@ document.getElementById('convert').addEventListener("click", convertCurrency);
 let sWorker;
 
 if ( navigator.serviceWorker ) {
-    navigator.serviceWorker.register('./dist/sw.js').then( registered => {
+    navigator.serviceWorker.register('/sw.js').then( registered => {
         sWorker = registered;
         console.log(registered);
     }).catch( e => {
